@@ -15,8 +15,9 @@
 
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
+        <script src="https://unpkg.com/vue"></script>
 
-        <title>Thank you for your message</title>
+        <title>Video Accesssibility Page</title>
     </head>
     <body>
         <!--==================== HEADER ====================-->
@@ -35,13 +36,13 @@
                             <a href="index.html#about" class="nav__link">About</a>
                         </li>
                         <li class="nav__item">
-                            <a href="index.html#products" class="nav__link">Video</a>
+                            <a href="video.html" class="nav__link">Video</a>
                         </li>
                         <li class="nav__item">
-                            <a href="index.html#faqs" class="nav__link">Audio</a>
+                            <a href="audio.html" class="nav__link">Audio</a>
                         </li>
                         <li class="nav__item">
-                            <a href="index.html#contact" class="nav__link">FAQs</a>
+                            <a href="index.html#faqs" class="nav__link">FAQs</a>
                         </li>
                     </ul>
 
@@ -66,18 +67,26 @@
            <section class="home" id="home">
             <div class="home__container container grid">
                  <!-- GALLERY -->
-                <div class="gallery">
-                    <a href="video.html">
-                        <div class="player">
-                            <video controls autoplay>
-                            <source src="assets/img/skateboard.mp4" type="video/mp4" />
-                            <!-- fallback content here -->
-                            </video>
+                <div class="gallery" id="my-video">
+                    <video controls>
+                        <source src="{{ videoUrl }}" type="video/mp4">
+                        <track src="/videos/captions.vtt" kind="captions" srclang="en" label="English">
+                        Your browser does not support the video tag.
+                    </video>
+                      
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">
+                                Open Transcript
+                            </h3>
+                        </header>
+    
+                        <div class="questions__content" >
+                            <button class="button button--flex" id="rewindButton">Rewind</button>
+                            
                         </div>
-                    </a>
-                    <a href="video.html" class="button button--flex">
-                        Enlarge Controls <i class="ri-arrow-right-down-line button__icon"></i>
-                    </a>
+                    </div>
                 </div>
 
                 <div class="questions__item">
@@ -90,7 +99,7 @@
 
                     <div class="questions__content">
                         <p class="questions__description">
-                            [0:00 Someone in blue and black vans pushes off on a skateboard twice]<br><br> [0:05 continues rolling then braces into the stance for a basic ollie] <br><br> [0:06 Person jumps by crounching at the knees and popping the tail of the skateboard 0:06] <br><br> [0:08 Kicks foot to swivel skateboard 360 degrees in the air] <br><br> [0:10 lands perfectly back on skateboard and continues rolling]
+                            [0:00 Someone in blue and black vans pushes off on a skateboard twice]<br><br> [0:05 continues rolling then braces into the stance for a basic ollie] <br><br> [0:06 Person jumps by crounching at the knees and popping the tail of the skateboard] <br><br> [0:08 Kicks foot to swivel skateboard 360 degrees in the air] <br><br> [0:10 lands perfectly back on skateboard and continues rolling]
                         </p>
                     </div>
                 </div>
@@ -204,5 +213,7 @@
 
 <!--=============== MAIN JS ===============-->
 <script src="assets/js/main.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

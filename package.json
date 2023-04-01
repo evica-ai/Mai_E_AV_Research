@@ -4,7 +4,7 @@
   "description": "Evica's AV assignment",
   "main": "app.js",
   "scripts": {
-    "start": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app"
   },
   "author": "Evica Mai",
   "license": "MIT",
