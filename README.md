@@ -1,5 +1,5 @@
 <p>
-<video src="assets/img/home/hero_2.mp4" width="100%" style="max-width:100%;">
+<img src="assets/img/home/hero_bg.png" width="100%" style="max-width:100%;">
 </p>
 <h1 text-align="center">AV Reserearch Assignment</h1>
 <h2>Welcome to the AV Research repository where functionality comes first</h2>
