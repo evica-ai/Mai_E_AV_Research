@@ -15,8 +15,9 @@
 
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
+        <script src="https://unpkg.com/vue"></script>
 
-        <title>Thank you for your message</title>
+        <title>Audio Accesssibility Page</title>
     </head>
     <body>
         <!--==================== HEADER ====================-->
@@ -63,34 +64,74 @@
 
         <main class="main">
            <!--==================== HOME ====================-->
-           <section class="thanks">
-            <div class="thanks__container container">
-                <div class="thanks__img">
-                    <img src="assets/img/home/hero.gif" alt="">
-                    <div class="thanks__shadow"></div>
-                </div>
-                
-                <div class="thanks__data">
-                    <span class="thanks__subtitle">Subscription Success.</span>
-                    <h1 class="thanks__title">Thank you for subscribing!</h1>
-                    <p class="thanks__description">
-                        I'll get back to you in a jiffy every so often, <br> in the meantime, enjoy your stay here
-                    </p>
-                    <a href="index.html" class="thanks__button">
-                        Go Home
+           <section class="home" id="home">
+            <div class="home__container container grid">
+                 <!-- GALLERY -->
+                <div class="gallery">
+                    <audio controls>
+                        <source src="{{ audioUrl }}" type="audio/mp3"> 
+                        <track src="/audio/example-captions.vtt" kind="captions" srclang="en" label="English">
+                        Your browser does not support the audio tag.
+                    </audio>
+                        
+                      
+                    <a href="video.html" class="button button--flex">
+                        Enlarge Controls <i class="ri-arrow-right-down-line button__icon"></i>
                     </a>
                 </div>
 
-                
+                <div class="questions__item">
+                    <header class="questions__header">
+                        <i class="ri-add-line questions__icon"></i>
+                        <h3 class="questions__item-title">
+                            Open Transcript
+                        </h3>
+                    </header>
+
+                    <div class="questions__content">
+                        <p class="questions__description">
+                            <br> [00:00:00.000 - 00:00:05.000<br>
+                            Baby I neeed your touch 
+                            unforgettable kisses] <br><br>
+
+                            [00:00:05.000 - 00:00:13.000 <br>
+                            yours is never too much, that's why I want all of the pieces] <br><br>
+
+                            [00:00:13.000 - 00:00:17.000 <br>
+                            Ooooh ooh you lose control and no one sees that] <br><br>
+
+                            [00:00:22.000 - 00:00:23.000 <br>
+                            Baby tell me what it's like, being perfectly balanced] <br><br>
+
+                            [00:00:23.000 - 00:00:27.000 <br>
+                            Baby tell me what it's like, being perfectly balanced]
+
+
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="home__social">
+                    <span class="home__social-follow">Follow Me</span>
+
+                    <div class="home__social-links">
+                        <a href="https://www.linkedin.com/in/evica-mai-004b141b7/" target="_blank" class="home__social-link">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/evi_boo21/" target="_blank" class="home__social-link">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://twitter.com/jellorini" target="_blank" class="home__social-link">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-           </section>
-
-           
-
-           
+        </section>
         </main>
 
-        
+          
               
 
 <!--==================== FOOTER ====================-->
@@ -179,5 +220,7 @@
 
 <!--=============== MAIN JS ===============-->
 <script src="assets/js/main.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

@@ -146,6 +146,37 @@ toggleBtn.addEventListener("click", function() {
 });
 
 
+/*=============== VIDEO CONTROLS ===============*/
+const playPauseButton = document.getElementById("play-pause-button");
+const seekBar = document.getElementById("seek-bar");
+const enlargeButton = document.getElementById("enlarge-button");
+const rewindButton = document.getElementById("rewindButton");
+
+rewindButton.addEventListener("click", function() {
+  video.currentTime -= 10; // Rewind 10 seconds
+});
+
+playPauseButton.addEventListener("click", function() {
+  if (video.paused) {
+    video.play();
+    playPauseButton.innerHTML = '<i class="ri-pause-line"></i>';
+  } else {
+    video.pause();
+    playPauseButton.innerHTML = '<i class="ri-play-line"></i>';
+  }
+});
+
+video.addEventListener("timeupdate", function() {
+  const progress = (video.currentTime / video.duration) * 100;
+  seekBar.style.width = `${progress}%`;
+  seekBar.querySelector("before").style.left = `${progress}%`;
+});
+
+enlargeButton.addEventListener("click", function() {
+  video.webkitEnterFullscreen();
+});
+
+
 sr.reveal(`.home__data`)
 sr.reveal(`.home__img`, {delay: 500})
 sr.reveal(`.home__social`, {delay: 600})

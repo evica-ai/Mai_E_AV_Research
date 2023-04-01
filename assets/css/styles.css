@@ -1146,4 +1146,18 @@ video::-webkit-media-controls-time-remaining-display {
 
 #my-video::-webkit-media-controls-mute-button {
   display: none;
+}
+
+#rewindButton {
+  padding-left: 1rem;
+  background-color: var(--first-color-lighten);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
