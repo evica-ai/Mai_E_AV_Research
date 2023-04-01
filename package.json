@@ -1,0 +1,16 @@
+{
+  "name": "evica_mai_av",
+  "version": "1.0.0",
+  "description": "Evica's AV assignment",
+  "main": "app.js",
+  "scripts": {
+    "start": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Evica Mai",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "node": "^19.8.1",
+    "start": "^5.1.0"
+  }
+}

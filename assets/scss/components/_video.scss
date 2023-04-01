@@ -1,0 +1,63 @@
+video::-webkit-media-controls {
+    background-color: transparent;
+    color: white;
+  }
+  
+  video::-webkit-media-controls-play-button {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+  }
+  
+  video::-webkit-media-controls-volume-slider {
+    width: 80px;
+  }
+  
+  video::-webkit-media-controls-timeline {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 5px;
+  }
+  
+  video::-webkit-media-controls-time-remaining-display {
+    color: white;
+  }
+  
+  #my-video::-webkit-media-controls {
+    display: none !important;
+  }
+  
+  #my-video::-webkit-media-controls-enclosure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #my-video::-webkit-media-controls-panel {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+    color: #fff;
+  }
+  
+  #my-video::-webkit-media-controls-play-button {
+    display: none;
+  }
+  
+  #my-video::-webkit-media-controls-timeline {
+    height: 3px;
+  }
+  
+  #my-video::-webkit-media-controls-volume-slider-container {
+    display: none;
+  }
+  
+  #my-video::-webkit-media-controls-mute-button {
+    display: none;
+  }
+  
